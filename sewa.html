@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="author" content="Sabrina" />
+  <meta name="description" content="Lorem ipsum dolor sit amet" />
+  <meta name="viewport"
+    content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+  <title>Binar: Challenge 04</title>
+  <link rel="shortcut icon" type="image/x-icon" href="img/logo.png" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Example CSS -->
+  <link href="css/style.example.css" rel="stylesheet" />
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="https://res.cloudinary.com/dutyxlvlt/image/upload/v1710479200/logo_1_aj8j20.png" alt="logo" />
+      </a>
+      <button class="btn btn-success d-md-none" type="button" data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasExample" aria-controls="offcanvasExample" aria-controls="navbarNav"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#our-services">Our Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#why-us">Why Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#testimonial">Testimonial</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#faq">FAQ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link btn btn-success" href="#">Register</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="main-section pt-md-5" style="background-color: #f1f3ff">
+    <div class="bg-car"></div>
+    <div class="container h-100 d-flex pt-md-5">
+      <div class="row d-flex justify-content-center align-items-center">
+        <div class="col-md-6 tagline py-5">
+          <h2>Sewa & Rental Mobil Terbaik di kawasan (Lokasimu)</h2>
+          <p>
+            Selamat datang di Binar Car Rental. Kami menyediakan mobil
+            kualitas terbaik dengan harga terjangkau. Selalu siap melayani
+            kebutuhanmu untuk sewa mobil selama 24 jam.
+          </p>
+        </div>
+        <div class="col-md-6 img-car py-5">
+          <img src="https://res.cloudinary.com/dutyxlvlt/image/upload/v1710480076/img_car_my5xpe.png" alt=""
+            class="w-100" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="form-container justify-content-center d-flex">
+    <form class="row gy-2 gx-3" id="form-driver">
+      <div class="col-auto">
+        <label class="form-label" for="select">Tipe Driver</label>
+        <select class="form-select" name="driver">
+          <option selected="Pilih Tipe Driver" hidden>Pilih Tipe Driver</option>
+          <option value="supir">Dengan Sopir</option>
+          <option value="lepas_kunci">Tanpa Sopir (Lepas Kunci)</option>
+        </select>
+      </div>
+      <div class="col-auto">
+        <label class="form-label" for="datePicker">Tanggal</label>
+        <input type="date" class="form-control" id="datePicker">
+      </div>
+      <div class="col-auto">
+        <label class="form-label" for="timePicker" placeholder="Pilih Waktu">Waktu Jemput/Ambil</label>
+        <input type="time" class="form-control" id="timePicker">
+      </div>
+      <div class="col-auto">
+        <label class="form-label" for="textInput">
+          <span class="icon"></span>Jumlah Penumpang (Optional)<i class="bi bi-person-fill"></i></label>
+        <input type="number" class="form-control" id="capacity" placeholder="Jumlah Penumpang">
+      </div>
+      <div class="col">
+        <button type="button" class="btn btn-primary" onclick="cariKendaraan()">Cari Mobil</button>
+      </div>
+    </form>
+  </div>
+
+  <div id="output-kendaraan"></div>
+  
+  <div class="footer">
+    <div class="container pb-5">
+      <div class="row">
+        <div class="col-md-4">
+          <p>Jalan Suroyo No. 161 Mayangan Kota Probolonggo 672000</p>
+          <p>binarcarrental@gmail.com</p>
+          <p>081-233-334-808</p>
+        </div>
+        <div class="col-md-2 d-flex flex-column">
+          <a href="#our-services" class="text-decoration-none mb-3">Our services</a>
+          <a href="#why-us" class="text-decoration-none mb-3">Why Us</a>
+          <a href="#testimonial" class="text-decoration-none mb-3">Testimonial</a>
+          <a href="#faq" class="text-decoration-none mb-3">FAQ</a>
+        </div>
+        <div class="col-md-3">
+          <p>Connect with us</p>
+          <div class="d-flex mb-3">
+            <a href="https://facebook.com" target="_blank"><i class="bi bi-facebook"></i></a>
+            <a href="https://instagram.com/yusr0nab" target="_blank"><i class="bi bi-instagram"></i></a>
+            <a href="https://twitter.com" target="_blank"><i class="bi bi-twitter"></i></a>
+            <a href="https://mail.google.com" target="_blank"><i class="bi bi-envelope"></i></a>
+            <a href="https://twitch.com" target="_blank"><i class="bi bi-twitch"></i></a>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <p>Copyright Binar &copy; 2022</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Example Javascript -->
+  <script type="text/javascript" src="scripts/binar.js"></script>
+  <script type="text/javascript" src="scripts/app.example.js"></script>
+  <script type="text/javascript" src="scripts/car.example.js"></script>
+  <script type="text/javascript" src="scripts/main.example.js"></script> 
+  <script type="text/javascript" src="scripts/main.js"></script>
+  <script src="https://kit.fontawesome.com/111b8c6336.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
